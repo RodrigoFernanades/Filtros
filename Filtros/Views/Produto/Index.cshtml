@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Filtros.Models.Produto>
+    
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@if(TempData["Mensagem"] != null)
+{
+    <h3>@TempData["Mensagem"]</h3>
+}
+<h3></h3>
+<p>
+    @Html.ActionLink("Cadastrar Produto", "Cadastrar")
+</p>
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Nome)</th>
+            <th>@Html.DisplayNameFor(model => model.Preco)</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                <td>@Html.DisplayFor(modelItem => item.Preco)</td>
+            </tr>
+        }
+    </table>
