@@ -10,5 +10,6 @@ namespace Filtros.Models
         public int ProdutoID { get; set; }
         public string Nome { get; set; }
         public double Preco { get; set; }
+        public int MyProperty { get; set; }
     }
 }
